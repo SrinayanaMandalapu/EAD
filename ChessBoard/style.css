@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.chessboard {
+    width: 320px;
+    height: 320px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    border: 4px solid #333;
+}
+
+.chessboard div {
+    width: 100%;
+    height: 100%;
+}
+
+
+.chessboard div:nth-child(odd) {
+    background-color: #fff;
+}
+
+.chessboard div:nth-child(even) {
+    background-color: #000;
+}
+
+.chessboard div:nth-child(9n+1),
+.chessboard div:nth-child(9n+3),
+.chessboard div:nth-child(9n+5),
+.chessboard div:nth-child(9n+7) 
+ {
+    background-color: #000;
+}
+
+.chessboard div:nth-child(9n + 2),
+.chessboard div:nth-child(9n + 4),
+.chessboard div:nth-child(9n + 6),
+.chessboard div:nth-child(9n + 8){
+    background-color: #fff;
+}
